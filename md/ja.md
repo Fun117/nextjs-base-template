@@ -4,7 +4,7 @@
       <source media="(prefers-color-scheme: dark)" srcset="https://assets.vercel.com/image/upload/v1662130559/nextjs/Icon_dark_background.png">
       <img src="https://assets.vercel.com/image/upload/v1662130559/nextjs/Icon_light_background.png" height="128">
     </picture>
-    <h1 align="center">Next.js テンプレート</h1>
+    <h1 align="center">Next.jsベーステンプレート</h1>
   </a>
 </p>
 
@@ -32,7 +32,7 @@
 
 ## 概要
 
-このNext.jsテンプレートは、Next.jsを始めるための簡単なスタートポイントとして設計されています。テーマ切り替え、i18n（国際化）、サイトマップなどの機能が事前に組み込まれており、開発者が迅速にプロジェクトを開始できるようになっています。
+このNext.jsベーステンプレートは、Next.jsを始めるための簡単なスタートポイントとして設計されています。テーマ切り替え、i18n（国際化）、サイトマップなどの機能が事前に組み込まれており、開発者が迅速にプロジェクトを開始できるようになっています。
 
 ## 主な特徴
 
@@ -47,10 +47,10 @@
 
 ```bash
 # リポジトリをクローン
-git clone https://github.com/your-username/nextjs-template.git
+git clone https://github.com/fun117/nextjs-base-template.git
 
 # プロジェクトディレクトリに移動
-cd nextjs-template
+cd nextjs-base-template
 
 # 依存関係のインストール
 npm install

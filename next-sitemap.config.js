@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-    siteUrl: "https://nextjs-template.vercel.app",
+    siteUrl: "https://nextjs-base-template.vercel.app",
     generateRobotsTxt: true,
     sitemapSize: 5000,
     robotsTxtOptions: {

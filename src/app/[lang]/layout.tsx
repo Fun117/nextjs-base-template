@@ -9,7 +9,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // next-themes
 import { ThemeProvider } from "next-themes";
 
-
 // i18n
 import { LanguageProvider } from "../i18n/client";
 import { dir } from "i18next";
@@ -18,8 +17,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 // Metadata
 const meta = {
-	title: 'Next.js template',
-	description: "This is Next.js template website.",
+	title: 'Next.js Base template',
+	description: "This Next.js base template is designed as an easy starting point for Next.js projects. It comes with features such as theme switching, i18n (internationalization), and automatic sitemap generation, allowing developers to start their projects quickly.",
 	authors: {
 		name: 'Fun117',
 		url: 'https://fun117.vercel.app/'

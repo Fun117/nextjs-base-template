@@ -4,7 +4,7 @@
       <source media="(prefers-color-scheme: dark)" srcset="https://assets.vercel.com/image/upload/v1662130559/nextjs/Icon_dark_background.png">
       <img src="https://assets.vercel.com/image/upload/v1662130559/nextjs/Icon_light_background.png" height="128">
     </picture>
-    <h1 align="center">Next.js Template</h1>
+    <h1 align="center">Next.js base template</h1>
   </a>
 </p>
 
@@ -31,7 +31,7 @@
 
 ## Overview
 
-This Next.js template is designed as an easy starting point for Next.js projects. It comes with features such as theme switching, i18n (internationalization), and automatic sitemap generation, allowing developers to start their projects quickly.
+This Next.js base template is designed as an easy starting point for Next.js projects. It comes with features such as theme switching, i18n (internationalization), and automatic sitemap generation, allowing developers to start their projects quickly.
 
 ## Key Features
 
@@ -46,10 +46,10 @@ This Next.js template is designed as an easy starting point for Next.js projects
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/nextjs-template.git
+git clone https://github.com/fun117/nextjs-base-template.git
 
 # Navigate to the project directory
-cd nextjs-template
+cd nextjs-base-template
 
 # Install dependencies
 npm install

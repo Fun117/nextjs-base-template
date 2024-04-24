@@ -1,7 +1,7 @@
 {
-    "nextjs-template": "Next.js テンプレート",
-    "nextjs-template-website": "Next.js テンプレート ウェブサイト",
-    "Do you have experience creating websites? You can get started more easily with Next.js using this template. The template comes with features such as theme switching, i18n (internationalization), and a sitemap. Additionally, React Bootstrap is used to simplify UI development.": "ウェブサイトの作成経験はありますか？このNext.jsテンプレートを使用することで、Next.jsをより簡単に始めることができます。このテンプレートには、テーマ切り替え、i18n（国際化）、サイトマップなどの機能が組み込まれています。また、UIの構築を容易にするためにReact Bootstrapを採用しています。",
+    "nextjs-base-template": "Next.js ベーステンプレート",
+    "nextjs-base-template-website": "Next.js ベーステンプレート ウェブサイト",
+    "Do you have experience creating websites? You can get started more easily with Next.js using this base template. The template comes with features such as theme switching, i18n (internationalization), and a sitemap. Additionally, React Bootstrap is used to simplify UI development.": "ウェブサイトの作成経験はありますか？このNext.jsベーステンプレートを使用することで、Next.jsをより簡単に始めることができます。このテンプレートには、テーマ切り替え、i18n（国際化）、サイトマップなどの機能が組み込まれています。また、UIの構築を容易にするためにReact Bootstrapを採用しています。",
     "Home": "ホーム",
     "About": "概要",
     "Development": "開発",

@@ -57,7 +57,7 @@ const navigation_contents: type_navigation_contents[] = [
             },
             {
                 label: 'Repository',
-                url: 'https://github.com/Fun117/nextjs-template',
+                url: 'https://github.com/Fun117/nextjs-base-template',
                 target: '_blank',
             },
         ],
@@ -80,7 +80,7 @@ export function Header() {
                     height="30"
                     className="d-inline-block align-top w-auto h-auto mr-2"
                     />
-                    <span className='text-base font-bold'>{t(`nextjs-template`)}</span>
+                    <span className='text-base font-bold'>{t(`nextjs-base-template`)}</span>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">

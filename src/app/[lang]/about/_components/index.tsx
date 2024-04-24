@@ -112,8 +112,8 @@ function ClientComponent() {
             </div>
             <main className='flex flex-col gap-3 w-auto max-w-7xl mx-auto px-1 py-2'>
                 <div className='flex flex-col gap-2 text-center py-5'>
-                    <h1 className='font-bold text-5xl'>{t('nextjs-template')}</h1>
-                    <p>{t('Do you have experience creating websites? You can get started more easily with Next.js using this template. The template comes with features such as theme switching, i18n (internationalization), and a sitemap. Additionally, React Bootstrap is used to simplify UI development.')}</p>
+                    <h1 className='font-bold text-5xl'>{t('nextjs-base-template')}</h1>
+                    <p>{t('Do you have experience creating websites? You can get started more easily with Next.js using this base template. The template comes with features such as theme switching, i18n (internationalization), and a sitemap. Additionally, React Bootstrap is used to simplify UI development.')}</p>
                 </div>
                 <Row xs={1} md={2} className="g-4">
                     {modules_card.map((card, idx) => (
