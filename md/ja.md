@@ -22,7 +22,7 @@
 </p>
 
 <p align="center">
-  <a aria-label="README - English" href="./README.md">
+  <a aria-label="README - English" href="../README.md">
     <img alt="" src="https://img.shields.io/badge/English-blue?style=for-the-badge">
   </a>
   <a aria-label="README - 日本語" href="./ja.md">
