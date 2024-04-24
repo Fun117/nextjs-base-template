@@ -1,0 +1,10 @@
+{
+    "nextjs-template": "Next.js template",
+    "nextjs-template-website": "Next.js template website",
+    "Do you have experience creating websites? You can get started more easily with Next.js using this template. The template comes with features such as theme switching, i18n (internationalization), and a sitemap. Additionally, React Bootstrap is used to simplify UI development.": "Do you have experience creating websites? You can get started more easily with Next.js using this template. The template comes with features such as theme switching, i18n (internationalization), and a sitemap. Additionally, React Bootstrap is used to simplify UI development.",
+    "Home": "Home",
+    "About": "About",
+    "Development": "Development",
+    "Author": "Author",
+    "Repository": "Repository"
+}
