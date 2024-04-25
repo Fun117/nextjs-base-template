@@ -1,6 +1,8 @@
 {
-    "nextjs-base-template": "Next.js ベーステンプレート",
-    "nextjs-base-template-website": "Next.js ベーステンプレート ウェブサイト",
+    "Next.js base": "Next.js ベース",
+    "Next.js base template": "Next.js ベーステンプレート",
+    "Next.js base template website": "Next.js ベーステンプレート ウェブサイト",
+    "This Next.js base template is designed as an easy starting point for Next.js projects. It comes with features such as theme switching, i18n (internationalization), and automatic sitemap generation, allowing developers to start their projects quickly.": "このNext.jsベーステンプレートは、Next.jsを始めるための簡単なスタートポイントとして設計されています。テーマ切り替え、i18n（国際化）、サイトマップなどの機能が事前に組み込まれており、開発者が迅速にプロジェクトを開始できるようになっています。",
     "Do you have experience creating websites? You can get started more easily with Next.js using this base template. The template comes with features such as theme switching, i18n (internationalization), and a sitemap. Additionally, React Bootstrap is used to simplify UI development.": "ウェブサイトの作成経験はありますか？このNext.jsベーステンプレートを使用することで、Next.jsをより簡単に始めることができます。このテンプレートには、テーマ切り替え、i18n（国際化）、サイトマップなどの機能が組み込まれています。また、UIの構築を容易にするためにReact Bootstrapを採用しています。",
     "Home": "ホーム",
     "About": "概要",

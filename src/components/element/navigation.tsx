@@ -80,7 +80,7 @@ export function Header() {
                     height="30"
                     className="d-inline-block align-top w-auto h-auto mr-2"
                     />
-                    <span className='text-base font-bold'>{t(`nextjs-base-template`)}</span>
+                    <span className='text-base font-bold'>{t(`Next.js base`)}</span>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">

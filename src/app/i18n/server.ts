@@ -24,3 +24,9 @@ export async function getTranslation(lang = defaultLanguage) {
         i18n: i18nextInstance,
     };
 }
+
+export async function ServerTranslation(lang: string, content: string) {
+    const { t } = await getTranslation(lang);
+    const translatedContent = t(content);
+    return translatedContent;
+}
