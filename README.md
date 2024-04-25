@@ -29,7 +29,7 @@
   </a>
 </p>
 
-## Overview
+# Next.js base template
 
 This Next.js base template is designed as an easy starting point for Next.js projects. It comes with features such as theme switching, i18n (internationalization), and automatic sitemap generation, allowing developers to start their projects quickly.
 
@@ -40,34 +40,18 @@ This Next.js base template is designed as an easy starting point for Next.js pro
 - **Sitemap**: Automatically generates a sitemap for SEO.
 - **React Bootstrap**: Uses React Bootstrap to facilitate UI development.
 
-## Installation and Usage
+## Deploy your own
 
-### Installation
+Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/fun117/nextjs-base-template)
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Fun117/nextjs-base-template&project-name=nextjs-base-template&repository-name=nextjs-base-template)
+
+## How to use
+
+Execute [`git clone`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with to bootstrap the example:
 
 ```bash
-# Clone the repository
 git clone https://github.com/fun117/nextjs-base-template.git
-
-# Navigate to the project directory
-cd nextjs-base-template
-
-# Install dependencies
-npm install
 ```
 
-## Usage
-
-```bash
-# Start the development server
-npm run dev
-```
-
-Open your browser and go to `http://localhost:3000` to ensure the template is functioning correctly.
-
-## Contribution
-
-If you'd like to contribute to this template, please feel free to do so via GitHub Issues or Pull Requests. Any small fixes or improvements are welcome!
-
-## License
-
-This project is licensed under the MIT License. For more information, please see [LICENSE](./LICENSE.txt).
+Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).

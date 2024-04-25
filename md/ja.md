@@ -30,7 +30,7 @@
   </a>
 </p>
 
-## 概要
+# Next.jsベーステンプレート
 
 このNext.jsベーステンプレートは、Next.jsを始めるための簡単なスタートポイントとして設計されています。テーマ切り替え、i18n（国際化）、サイトマップなどの機能が事前に組み込まれており、開発者が迅速にプロジェクトを開始できるようになっています。
 
@@ -41,34 +41,16 @@
 - **サイトマップ**: SEO対策としてサイトマップが自動生成されます。
 - **React Bootstrap**: UIの構築を容易にするためにReact Bootstrapを採用しています。
 
-## インストールと使用方法
+## 自分自身でデプロイ
 
-### インストール
+この例を使用して [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) でデプロイするか、[StackBlitz](https://stackblitz.com/github/fun117/nextjs-base-template) でライブプレビューを行ってください。
+
+[![Vercelでデプロイ](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Fun117/nextjs-base-template&project-name=nextjs-base-template&repository-name=nextjs-base-template)
+
+## 使い方
 
 ```bash
-# リポジトリをクローン
 git clone https://github.com/fun117/nextjs-base-template.git
-
-# プロジェクトディレクトリに移動
-cd nextjs-base-template
-
-# 依存関係のインストール
-npm install
 ```
 
-## 使用方法
-
-```bash
-# 開発サーバーの起動
-npm run dev
-```
-
-ブラウザで `http://localhost:3000` にアクセスして、テンプレートが正常に動作していることを確認してください。
-
-## 貢献
-
-このテンプレートに貢献したい方は、GitHubのIssuesやPull Requestsを通じてご協力ください。どんな小さな修正や改善でも歓迎です！
-
-## ライセンス
-
-このプロジェクトはMITライセンスのもとで公開されています。詳細については [LICENSE](./LICENSE.txt) を参照してください。
+クラウドに [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) でデプロイしてください ([ドキュメント](https://nextjs.org/docs/deployment)).
