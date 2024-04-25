@@ -30,11 +30,11 @@ const modules_card = [
         version: `0.3.0`,
     },
     {
-        title: 'next-sitemap',
-        description: 'Sitemap generator for next.js, Generate sitemap(s) and robots.txt for all static/pre-rendered/dynamic/server-side pages.',
-        url: 'https://github.com/iamvishnusankar/next-sitemap',
-        image_url: '/img/modules/next-sitemap/banner.png',
-        version: `4.2.3`,
+        title: 'React Bootstrap',
+        description: 'The most popular front-end framework, rebuilt for React',
+        url: 'https://react-bootstrap.netlify.app/',
+        image_url: '/img/modules/react-bootstrap/banner.png',
+        version: `2.10.2`,
     },
     {
         title: 'i18next',
@@ -51,11 +51,11 @@ const modules_card = [
         version: `0.372.0`,
     },
     {
-        title: 'React Bootstrap',
-        description: 'The most popular front-end framework, rebuilt for React',
-        url: 'https://react-bootstrap.netlify.app/',
-        image_url: '/img/modules/react-bootstrap/banner.png',
-        version: `2.10.2`,
+        title: 'Custom Sitemap Generation',
+        description: 'Automatically generate sitemaps tailored for different languages.',
+        url: 'https://nextjs.org/docs/app/api-reference/file-conventions/metadata/sitemap',
+        image_url: '/brand/nextjs/docs/sitemap-banner.png',
+        version: `New`,
     },
 ]
 

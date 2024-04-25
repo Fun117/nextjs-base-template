@@ -1,0 +1,10 @@
+# *
+User-agent: *
+Allow: /
+Disallow: /api
+
+# Host
+Host: https://nextjs-base-template.vercel.app
+
+# Sitemaps
+Sitemap: https://nextjs-base-template.vercel.app/sitemap.xml

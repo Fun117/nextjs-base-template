@@ -9,8 +9,7 @@ const getNegotiatedLanguage = (
 };
 
 export const config = {
-    // https://nextjs.org/docs/app/building-your-application/routing/middleware#matcher
-    matcher: ['/((?!api|_next/static|_next/image|.*\\.html|.*\\.xml|.*\\.svg|.*\\.png|.*\\.ico|.*\\.webp$).*)'],
+    matcher: ['/((?!api|_next/static|_next/image|.*\\.html|.*\\.xml|.*\\.txt|.*\\.svg|.*\\.png|.*\\.ico|.*\\.webp$).*)'],
 };
 
 export function middleware(request: NextRequest) {
@@ -20,11 +19,13 @@ export function middleware(request: NextRequest) {
     const preferredLanguage = getNegotiatedLanguage(headers) || defaultLanguage;
 
     const pathname = request.nextUrl.pathname;
-    const pathnameIsMissingLocale = availableLanguages.every(
-        (lang) => !pathname.startsWith(`/${lang}/`) && pathname !== `/${lang}`,
+
+    // Check if the pathname starts with a valid two-letter language code
+    const isValidLanguagePath = availableLanguages.some(
+        (lang) => lang.length === 2 && (pathname.startsWith(`/${lang}/`) || pathname === `/${lang}`),
     );
 
-    if (pathnameIsMissingLocale) {
+    if (!isValidLanguagePath) {
         if (preferredLanguage !== defaultLanguage) {
             return NextResponse.redirect(
                 new URL(`/${preferredLanguage}${pathname}`, request.url),

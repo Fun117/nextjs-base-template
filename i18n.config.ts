@@ -1,6 +1,10 @@
 import { I18nConfig } from "@/app/i18n/settings";
 
 const i18nConfig: I18nConfig = {
+    namespaces: [
+        "translation",
+        "site",
+    ],
     defaultLocale: 'ja',
     locales: [
         'ja',
@@ -18,7 +22,7 @@ const i18nConfig: I18nConfig = {
             htmlLang: 'en-US',
             path: 'en',
         },
-    },
+    }
 };
 
 export default i18nConfig;

@@ -45,8 +45,6 @@ const modules_card = [
     },
 ]
 
-
-
 export default function PageClient_Home() {
 
 	const [NetworkStatus, setNetworkStatus] = useState<boolean>(true);

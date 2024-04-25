@@ -7,6 +7,7 @@ interface LocaleConfig {
 }
 
 export interface I18nConfig {
+    namespaces: string[];
     defaultLocale: string;
     locales: string[];
     path: string;
@@ -17,8 +18,7 @@ export interface I18nConfig {
 
 export const defaultLanguage = i18nConfig.defaultLocale;
 export const availableLanguages = i18nConfig.locales;
-
-export const namespaces = ['translation', 'test'];
+export const namespaces = i18nConfig.namespaces;
 
 export function getOptions(lng = defaultLanguage) {
     return {

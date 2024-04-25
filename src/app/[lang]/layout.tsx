@@ -85,7 +85,7 @@ export default function RootLayout({
 	return (
 		<html lang={lang} dir={dir(lang)} suppressHydrationWarning>
 			<LanguageProvider initialLanguage={lang}>
-				<body className={`w-full h-full min-h-screen ${inter.className}`}>
+				<body className={`flex h-full flex-col ${inter.className}`}>
 					<ThemeProvider attribute="class">
 						{children}
 					</ThemeProvider>
