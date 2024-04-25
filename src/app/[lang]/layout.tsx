@@ -23,8 +23,7 @@ const meta = {
 		name: 'Fun117',
 		url: 'https://fun117.vercel.app/'
 	},
-	Image: '/favicon.ico',
-	cardImage: '/brand/nextjs/twitter-card.png',
+	cardImage: 'https://nextjs-base-template.vercel.app/brand/nextjs/twitter-card.png',
 	robots: 'follow, index',
 	url: getURL()
 };
@@ -39,7 +38,6 @@ export const metadata: Metadata = {
 	keywords: ['Vercel', 'Next.js',],
 	authors: [{ name: meta.authors.name, url: meta.authors.url }],
 	creator: meta.authors.name,
-	icons: meta.Image,
 	generator: "Next.js",
 	publisher: 'Vercel',
 	robots: meta.robots,
