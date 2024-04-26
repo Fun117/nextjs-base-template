@@ -7,7 +7,7 @@ import PageClientLayout from '@/components/client/PageClient_layout';
 // is requested that doesn't match the middleware and
 // therefore doesn't have a locale associated with it.
 
-export default function Home({ params }: { params: { locale: string } }) {
+export default function Home({ params }: { params: { lang: string } }) {
     const { language } = useLanguage();
     const { t } = useTranslation(language);
 

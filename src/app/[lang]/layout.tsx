@@ -1,9 +1,8 @@
 import type { GetServerSideProps, Metadata, ResolvingMetadata } from "next";
 import { Inter } from "next/font/google";
-import { getURL } from "@/utils/main";
 
-// metadata config
-import meta from "../../../metadata.config";
+// config
+import _config from "../../../base.config";
 
 // CSS
 import "./globals.css";
@@ -32,41 +31,41 @@ export async function generateMetadata(
 
 	return {
 		title: {
-			template: `%s | ${t(meta.title)}`,
-			default: t(meta.title),
+			template: `%s | ${t(_config.meta.title)}`,
+			default: t(_config.meta.title),
 		},
-		description: t(meta.description),
+		description: t(_config.meta.description),
 		referrer: 'origin-when-cross-origin',
 		keywords: ['Vercel', 'Next.js',],
-		authors: [{ name: meta.authors.name, url: meta.authors.url }],
-		creator: meta.authors.name,
-		icons: meta.Image,
+		authors: [{ name: _config.meta.authors.name, url: _config.meta.authors.url }],
+		creator: _config.meta.authors.name,
+		icons: _config.meta.Image,
 		generator: "Next.js",
 		publisher: 'Vercel',
-		robots: meta.robots,
-		metadataBase: new URL(meta.url),
+		robots: _config.meta.robots,
+		metadataBase: new URL(_config.meta.url),
 		alternates: {
-			canonical: meta.origin,
+			canonical: _config.meta.origin,
 			languages: {
-				"ja-JP": `${meta.origin}/ja`,
-				"en-US": `${meta.origin}/en`,
+				"ja-JP": `${_config.meta.origin}/ja`,
+				"en-US": `${_config.meta.origin}/en`,
 			},
 		},
 		openGraph: {
-			url: meta.url,
-			title: t(meta.title),
-			description: t(meta.description),
-			images: [meta.cardImage],
+			url: _config.meta.url,
+			title: t(_config.meta.title),
+			description: t(_config.meta.description),
+			images: [_config.meta.cardImage],
 			type: 'website',
-			siteName: t(meta.title),
+			siteName: t(_config.meta.title),
 		},
 		twitter: {
 			card: 'summary_large_image',
-			site: `@${meta.authors.name}`,
-			creator: `@${meta.authors.name}`,
-			title: t(meta.title),
-			description: t(meta.description),
-			images: [meta.cardImage]
+			site: `@${_config.meta.authors.name}`,
+			creator: `@${_config.meta.authors.name}`,
+			title: t(_config.meta.title),
+			description: t(_config.meta.description),
+			images: [_config.meta.cardImage]
 		},
 	}
 }

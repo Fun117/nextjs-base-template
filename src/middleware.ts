@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import Negotiator from 'negotiator';
 import { defaultLanguage, availableLanguages } from '@/app/i18n/settings';
+import _config from '../base.config';
 
 const getNegotiatedLanguage = (
     headers: Negotiator.Headers,
@@ -8,8 +9,16 @@ const getNegotiatedLanguage = (
     return new Negotiator({ headers }).language([...availableLanguages]);
 };
 
+
+// The page's `config` must be an object initialized directly when being exported and not modified dynamically.
+// The `config` object must only contain static constant literals without expressions. 
+// Docs: https://nextjs.org/docs/messages/invalid-page-config
 export const config = {
-    matcher: ['/((?!api|_next/static|_next/image|.*\\.html|.*\\.xml|.*\\.txt|.*\\.svg|.*\\.png|.*\\.ico|.*\\.webp$).*)'],
+    matcher: [
+        '/',
+        `/(ja|en)/:path*`,
+        '/((?!_next|_vercel|.*\\..*).*)'
+    ]
 };
 
 export function middleware(request: NextRequest) {

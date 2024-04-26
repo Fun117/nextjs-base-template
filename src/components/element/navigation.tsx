@@ -14,12 +14,12 @@ import Link from 'next/link';
 import { Button, Card, Col, Container, Form, Nav, NavDropdown, Navbar, ProgressBar, Row } from 'react-bootstrap';
 
 // i18n
-import i18nConfig from '../../../i18n.config';
 import { useLanguage, useTranslation } from '@/app/i18n/client';
 import { ChangeLang, LPass } from '../link';
 
 // next-theme
 import { ThemeSwitch } from '../client/theme-toggle';
+import _config from '../../../base.config';
 
 // types
 interface type_navLink {
@@ -115,9 +115,9 @@ export function Header() {
                             <div className='flex items-center text-white hover:text-blue-200 transition-all duration-300 ease-in-out'>
                                 <Languages className='font-bold pr-1'/>
                                 <select className='bg-transparent focus:outline-none' defaultValue={`${useLanguage().language}`} aria-label={`select language`} onChange={e => window.location.href = `${ChangeLang(e.target.value)}`}>
-                                    {i18nConfig.locales.map((lang, idx) => (
+                                    {_config.i18n.locales.map((lang, idx) => (
                                         <option key={idx} value={lang}>
-                                        {i18nConfig.localeConfigs[lang].label}
+                                        {_config.i18n.localeConfigs[lang].label}
                                         </option>
                                     ))}
                                 </select>

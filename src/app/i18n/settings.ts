@@ -1,24 +1,8 @@
-import i18nConfig from "../../../i18n.config";
+import _config from "../../../base.config";
 
-interface LocaleConfig {
-    label: string;
-    htmlLang: string;
-    path: string;
-}
-
-export interface I18nConfig {
-    namespaces: string[];
-    defaultLocale: string;
-    locales: string[];
-    path: string;
-    localeConfigs: {
-        [key: string]: LocaleConfig;
-    };
-}
-
-export const defaultLanguage = i18nConfig.defaultLocale;
-export const availableLanguages = i18nConfig.locales;
-export const namespaces = i18nConfig.namespaces;
+export const defaultLanguage = _config.i18n.defaultLocale;
+export const availableLanguages = _config.i18n.locales;
+export const namespaces = _config.i18n.namespaces;
 
 export function getOptions(lng = defaultLanguage) {
     return {

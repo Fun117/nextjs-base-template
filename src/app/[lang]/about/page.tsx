@@ -21,8 +21,8 @@ export async function generateMetadata(
 	}
 }
 
-export default async function Home({ params }: { params: { locale: string } }) {
-	const lang = params.locale;
+export default async function Home({ params }: { params: { lang: string } }) {
+	const lang = params.lang;
 
 	return (
 		<>

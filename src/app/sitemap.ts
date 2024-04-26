@@ -1,16 +1,14 @@
 import { MetadataRoute } from 'next';
 import fs from 'fs';
 import path from 'path';
-import meta from '../../metadata.config';
-import i18nConfig from '../../i18n.config';
-import { excludedDirs } from '../../sitemap.config';
+import _config from '../../base.config';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 	const result: MetadataRoute.Sitemap = [];
 
-	for (const lang of i18nConfig.locales) {
-		const langConfig = i18nConfig.localeConfigs[lang];
-		const homeUrl = `${meta.origin}/${langConfig.path}`;
+	for (const lang of _config.i18n.locales) {
+		const langConfig = _config.i18n.localeConfigs[lang];
+		const homeUrl = `${_config.meta.origin}/${langConfig.path}`;
 
 		result.push({
 			url: homeUrl,
@@ -18,9 +16,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 			changeFrequency: 'daily',
 			priority: 1.0,
 			alternates: {
-				languages: i18nConfig.locales.reduce<{ [key: string]: string }>((acc, l) => {
-					const langConfig = i18nConfig.localeConfigs[l];
-					acc[langConfig.htmlLang] = `${meta.origin}/${langConfig.path}`;
+				languages: _config.i18n.locales.reduce<{ [key: string]: string }>((acc, l) => {
+					const langConfig = _config.i18n.localeConfigs[l];
+					acc[langConfig.htmlLang] = `${_config.meta.origin}/${langConfig.path}`;
 					return acc;
 				}, {}),
 			},
@@ -32,10 +30,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 			const items = fs.readdirSync(dirPath, { withFileTypes: true });
 
 			for (const item of items) {
-				if (item.isDirectory() && !excludedDirs.includes(item.name)) {
+				if (item.isDirectory() && !_config.sitemap?.excludedDirs?.includes(item.name)) {
 					const pagePath = path.join(dirPath, item.name, 'page.tsx');
 					if (fs.existsSync(pagePath)) {
-						const url = `${meta.origin}/${langConfig.path}/${item.name}`;
+						const url = `${_config.meta.origin}/${langConfig.path}/${item.name}`;
 
 						result.push({
 							url: url,
@@ -43,9 +41,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 							changeFrequency: 'daily',
 							priority: 0.7,
 							alternates: {
-								languages: i18nConfig.locales.reduce<{ [key: string]: string }>((acc, l) => {
-									const langConfig = i18nConfig.localeConfigs[l];
-									acc[langConfig.htmlLang] = `${meta.origin}/${langConfig.path}/${item.name}`;
+								languages: _config.i18n.locales.reduce<{ [key: string]: string }>((acc, l) => {
+									const langConfig = _config.i18n.localeConfigs[l];
+									acc[langConfig.htmlLang] = `${_config.meta.origin}/${langConfig.path}/${item.name}`;
 									return acc;
 								}, {}),
 							},
