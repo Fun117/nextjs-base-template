@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://nextjs.org">
+  <a href="https://nextjs-base-template.vercel.app/">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="https://assets.vercel.com/image/upload/v1662130559/nextjs/Icon_dark_background.png">
       <img src="https://assets.vercel.com/image/upload/v1662130559/nextjs/Icon_light_background.png" height="128">
@@ -16,8 +16,8 @@
     <img alt="" src="https://img.shields.io/badge/V14.2.2-blue?style=for-the-badge&label=NPM&labelColor=black
     ">
   </a>
-  <a aria-label="License" href="https://github.com/vercel/next.js/blob/canary/license.md">
-    <img alt="" src="https://img.shields.io/npm/l/next.svg?style=for-the-badge&labelColor=000000">
+  <a aria-label="License" href="https://github.com/Fun117/nextjs-base-template/blob/main/LICENSE.txt">
+    <img alt="" src="https://img.shields.io/github/license/Fun117/nextjs-base-template?style=for-the-badge&labelColor=000000">
   </a>
 </p>
 
@@ -28,6 +28,12 @@
   <a aria-label="README - 日本語" href="./ja.md">
     <img alt="" src="https://img.shields.io/badge/日本語-blue?style=for-the-badge">
   </a>
+</p>
+
+<p align="center">
+  <img alt="Mobile dark Image" src="../public/img/screenshot/2024-04-29 0.46.29-bg.png">
+  <img alt="Desctop lightImage" src="../public/img/screenshot/2024-04-29 0.44.00.png">
+  <img alt="Desctop dark Image" src="../public/img/screenshot/2024-04-29 0.44.01.png">
 </p>
 
 # Next.jsベーステンプレート
