@@ -49,6 +49,48 @@ const _config: Config = {
             'not-found', // Directory for 404 pages
         ],
     },
+    navigation: {
+        ui: {
+            home_url: '/',
+            logo: {
+                url: '/brand/vercel/vercel-icon-light.png',
+                alt: 'Vercel Logo'
+            },
+            label: 'Next.js base',
+            style: {
+                bg: 'primary',
+                dataBsTheme: 'dark',
+            },
+        },
+        contents: [
+            {
+                type: 'one',
+                label: 'Home',
+                url: '/',
+            },
+            {
+                type: 'one',
+                label: 'About',
+                url: '/about',
+            },
+            {
+                type: 'group',
+                label: 'Development',
+                links: [
+                    {
+                        label: 'Author',
+                        url: 'https://fun117.vercel.app/',
+                        target: '_blank',
+                    },
+                    {
+                        label: 'Repository',
+                        url: 'https://github.com/Fun117/nextjs-base-template',
+                        target: '_blank',
+                    },
+                ],
+            },
+        ]
+    }
 };
 
 // If you update the languages in i18n, you need to manually update the config in src/middleware.ts.

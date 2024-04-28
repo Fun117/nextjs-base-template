@@ -39,7 +39,7 @@ export const ThemeSwitch = () => {
 	if (!mounted) {
 		return (
 			<>
-			<button className='flex items-center text-white w-[24px] h-[24px] cursor-pointer hover:scale-[102%] active:scale-[98%] active:opacity-30 transition-all duration-300 ease-in-out' disabled>
+			<button className='flex items-center w-[24px] h-[24px] cursor-pointer hover:scale-[102%] active:scale-[98%] active:opacity-30 transition-all duration-300 ease-in-out' disabled>
 				<Spinner
 				as="span"
 				animation="border"
@@ -55,7 +55,7 @@ export const ThemeSwitch = () => {
 
 	return (
 		<>
-		<button className='text-white w-[24px] h-[24px] cursor-pointer hover:scale-[102%] active:scale-[98%] active:opacity-30 transition-all duration-300 ease-in-out'>
+		<button className='w-[24px] h-[24px] cursor-pointer hover:scale-[102%] active:scale-[98%] active:opacity-30 transition-all duration-300 ease-in-out'>
 			{resolvedTheme === 'dark' ?
 			<Moon className='' onClick={e => setTheme(`light`)}/>:
 			<Sun className='' onClick={e => setTheme(`dark`)}/>}

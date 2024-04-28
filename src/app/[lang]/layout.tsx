@@ -5,8 +5,8 @@ import { Inter } from "next/font/google";
 import _config from "../../../base.config";
 
 // CSS
-import "./globals.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import "./globals.css";
 
 // next-themes
 import { ThemeProvider } from "next-themes";

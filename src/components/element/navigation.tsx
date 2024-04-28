@@ -70,17 +70,21 @@ export function Header() {
 
     return (
         <>
-        <Navbar expand="lg" bg='primary' data-bs-theme="dark">
-            <Container fluid>
-                <Navbar.Brand href={LPass(`/`)}>
-                    <Image
-                    alt="Img"
-                    src="/brand/vercel/vercel-icon-light.png"
-                    width="30"
-                    height="30"
-                    className="d-inline-block align-top w-auto h-auto mr-2"
-                    />
-                    <span className='text-base font-bold'>{t(`Next.js base`)}</span>
+        <Navbar expand={_config.navigation.ui.style?.expand || `lg`} bg={_config.navigation.ui.style?.bg || `primary`} data-bs-theme={_config.navigation.ui.style?.dataBsTheme || `dark`}>
+            <Container fluid className='text-[var(--bs-navbar-brand-color)]'>
+                <Navbar.Brand href={LPass(_config.navigation.ui.home_url || `/`)}>
+                    {_config.navigation.ui.logo &&
+                        <Image
+                        alt={_config.navigation.ui.logo.alt || `Logo`}
+                        src={`${_config.navigation.ui.logo.url || `/favicon.ico`}`}
+                        width="30"
+                        height="30"
+                        className="d-inline-block align-top w-auto h-auto mr-2"
+                        />
+                    }
+                    {_config.navigation.ui.label &&
+                        <span className='text-base font-bold'>{t(_config.navigation.ui.label || `My site`)}</span>
+                    }
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
@@ -112,7 +116,7 @@ export function Header() {
                             className=" my-2 my-lg-0"
                             navbarScroll
                         >
-                            <div className='flex items-center text-white hover:text-blue-200 transition-all duration-300 ease-in-out'>
+                            <div className='flex items-center transition-all duration-300 ease-in-out'>
                                 <Languages className='font-bold pr-1'/>
                                 <select className='bg-transparent focus:outline-none' defaultValue={`${useLanguage().language}`} aria-label={`select language`} onChange={e => window.location.href = `${ChangeLang(e.target.value)}`}>
                                     {_config.i18n.locales.map((lang, idx) => (

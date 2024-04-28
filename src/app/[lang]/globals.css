@@ -12,8 +12,3 @@
   --background-start-rgb: 0, 0, 0;
   --background-end-rgb: 33, 37, 41;
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: var(--background-end-rgb)
-}
