@@ -64,7 +64,7 @@ interface TypeNavigationUI {
     style?: {
         expand?: boolean | string | 'sm' | 'md' | 'lg' | 'xl' | 'xxl'; // Expansion size
         bg?: string; // Background color
-        dataBsTheme: string; // Bootstrap theme
+        dataBsTheme?: string; // Bootstrap theme
     }
 }
 interface TypeNavLink {

@@ -21,56 +21,13 @@ import { ChangeLang, LPass } from '../link';
 import { ThemeSwitch } from '../client/theme-toggle';
 import _config from '../../../base.config';
 
-// types
-interface type_navLink {
-    label: string;
-    url: string;
-    target?: HTMLAttributeAnchorTarget | undefined;
-}
-interface type_navigation_contents {
-    type: 'one' | 'group';
-    label: string;
-    url?: string;
-    target?: HTMLAttributeAnchorTarget | undefined;
-    links?: type_navLink[]
-}
-
-const navigation_contents: type_navigation_contents[] = [
-    {
-        type: 'one',
-        label: 'Home',
-        url: '/',
-    },
-    {
-        type: 'one',
-        label: 'About',
-        url: '/about',
-    },
-    {
-        type: 'group',
-        label: 'Development',
-        links: [
-            {
-                label: 'Author',
-                url: 'https://fun117.vercel.app/',
-                target: '_blank',
-            },
-            {
-                label: 'Repository',
-                url: 'https://github.com/Fun117/nextjs-base-template',
-                target: '_blank',
-            },
-        ],
-    },
-]
-
 export function Header() {
     const { language } = useLanguage();
     const { t } = useTranslation(language);
 
     return (
         <>
-        <Navbar expand={_config.navigation.ui.style?.expand || `lg`} bg={_config.navigation.ui.style?.bg || `primary`} data-bs-theme={_config.navigation.ui.style?.dataBsTheme || `dark`}>
+        <Navbar expand={_config.navigation.ui.style?.expand || `lg`} bg={_config.navigation.ui.style?.bg || `primary`} data-bs-theme={_config.navigation.ui.style?.dataBsTheme} className={`${_config.navigation.ui.style?.bg === 'none' && `backdrop-blur-md border-b dark:border-neutral-700`}`}>
             <Container fluid className='text-[var(--bs-navbar-brand-color)]'>
                 <Navbar.Brand href={LPass(_config.navigation.ui.home_url || `/`)}>
                     {_config.navigation.ui.logo &&
@@ -93,7 +50,7 @@ export function Header() {
                         style={{ maxHeight: '100px' }}
                         navbarScroll
                     >
-                        {navigation_contents.map((content, idx) => (
+                        {_config.navigation.contents.map((content, idx) => (
                             <React.Fragment key={idx}>
                                 {content.type === 'group' ? (
                                     <NavDropdown title={t(content.label)} id={`navbarDropdown_${idx}`}>
