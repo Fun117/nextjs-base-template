@@ -3,6 +3,20 @@ import { getURL } from "@/utils/main";
 
 // Base Configuration
 const _config: Config = {
+    year: '2024',
+    // Author
+    author: {
+        name: 'Fun117',
+        url: 'https://fun117.vercel.app/',
+        socialAccounts: {
+            email: 'fun117.kun@gmail.com',
+            github: 'https://github.com/Fun117',
+            twitter: 'https://twitter.com/Fun_117',
+            youtube: 'https://www.youtube.com/channel/UCT34DhsVlYoyV8Y4c-MTTrQ',
+            reddit: 'https://www.reddit.com/user/_Fun117/',
+            discord: 'https://discord.com/users/990984460365365258/',
+        }
+    },
     // Metadata
     meta: {
         origin: 'https://nextjs-base-template.vercel.app', // Site origin
@@ -90,7 +104,71 @@ const _config: Config = {
                 ],
             },
         ]
-    }
+    },
+    footer: {
+        ui: {
+            label: 'Fun117',
+            logo: {
+                url: '/brand/fun117/fun117_1080x1080.png',
+                alt: 'Fun117 Logo',
+                css: 'border overflow-hidden rounded-full shadow-sm'
+            },
+            style: {
+                bg: 'primary',
+                dataBsTheme: 'dark',
+            },
+        },
+        contents: [
+            {
+                label: 'Site link',
+                links: [
+                    {
+                        label: 'Home',
+                        url: '/',
+                    },
+                    {
+                        label: 'About',
+                        url: '/about',
+                    },
+                ],
+            },
+            {
+                label: 'Development',
+                links: [
+                    {
+                        label: 'Next.js',
+                        url: 'https://nextjs.org/',
+                        target: '_blank',
+                    },
+                    {
+                        label: 'next-themes',
+                        url: 'https://github.com/pacocoursey/next-themes',
+                        target: '_blank',
+                    },
+                    {
+                        label: 'i18next',
+                        url: 'https://www.i18next.com/',
+                        target: '_blank',
+                    },
+                    {
+                        label: 'Lucide React',
+                        url: 'https://lucide.dev/',
+                        target: '_blank',
+                    },
+                    {
+                        label: 'React Bootstrap',
+                        url: 'https://react-bootstrap.netlify.app/',
+                        target: '_blank',
+                    },
+                    {
+                        label: 'Sitemap',
+                        url: 'https://nextjs.org/docs/app/api-reference/file-conventions/metadata/sitemap',
+                        target: '_blank',
+                    },
+                ],
+            },
+        ],
+    },
 };
 
 // If you update the languages in i18n, you need to manually update the config in src/middleware.ts.

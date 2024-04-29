@@ -2,9 +2,11 @@
 import { Metadata, ResolvingMetadata } from "next";
 import { LayoutProps } from "../layout";
 
+// i18n
 import { getTranslation } from "@/app/i18n/server";
 
-import ClientComponent from "./_components";
+// Layout
+import PageClientLayout_About from "./_components/about";
 
 const meta = {
 	title: `About`
@@ -25,8 +27,6 @@ export default async function Home({ params }: { params: { lang: string } }) {
 	const lang = params.lang;
 
 	return (
-		<>
-			<ClientComponent />
-		</>
+		<PageClientLayout_About />
 	);
 }

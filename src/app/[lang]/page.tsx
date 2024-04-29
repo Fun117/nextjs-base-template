@@ -1,12 +1,9 @@
 
-import ClientComponent from "./_components/home";
+import PageClientLayout_Home from "./_components/home";
 
 export default async function Home({ params }: { params: { lang: string } }) {
-	const lang = params.lang;
-
+	// const lang = params.lang;
 	return (
-		<>
-			<ClientComponent />
-		</>
+		<PageClientLayout_Home />
 	);
 }

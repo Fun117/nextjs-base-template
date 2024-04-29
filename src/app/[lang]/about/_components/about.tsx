@@ -1,5 +1,8 @@
 'use client';
 
+// Layout
+import BasePageLayout from '@/components/client/base_layout';
+
 // React
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
@@ -10,9 +13,6 @@ import { Accordion, Badge, Button, Card, Col, Container, Form, Nav, NavDropdown,
 // i18n
 import { useLanguage, useTranslation } from '@/app/i18n/client';
 
-// Elements
-import { Loading, NetworkOffline } from '@/components/element/status';
-import { Header } from '@/components/element/navigation';
 
 const modules_card = [
     {
@@ -59,57 +59,13 @@ const modules_card = [
     },
 ]
 
-export default function PageClient_Home() {
+export default function PageClientLayout_About() {
 
-	const [NetworkStatus, setNetworkStatus] = useState<boolean>(true);
-	const [isPageLoaded, setPageLoaded] = useState(false);
-	useEffect(() => {
-        const PageLoaded = async () => {
-            try {
-                if (typeof window !== 'undefined') {
-					window.addEventListener("offline", (e) => {
-						setNetworkStatus(false)
-					});
-					window.addEventListener("online", (e) => {
-						setNetworkStatus(true)
-					});
-				}
-                setPageLoaded(true);
-            } catch (error) {
-                console.error('PageLoaded:', error);
-            }
-        };
-
-        if (!isPageLoaded) {
-            PageLoaded();
-        }
-    }, [isPageLoaded]);
-
-	if (!NetworkStatus) {
-		return <NetworkOffline/>;
-	}
-
-	if (!isPageLoaded) {
-        return <Loading />;
-    }
-
-    return (
-        <>
-        <ClientComponent/>
-        </>
-    )
-}
-
-function ClientComponent() {
     const { language } = useLanguage();
     const { t } = useTranslation(language);
 
     return (
-        <>
-        <div className='flex flex-col w-full h-full'>
-            <div className='sticky top-0 left-0 z-[200]'>
-                <Header/>
-            </div>
+        <BasePageLayout>
             <main className='flex flex-col gap-3 w-auto max-w-7xl mx-auto px-1 py-2'>
                 <div className='flex flex-col gap-2 text-center py-5'>
                     <h1 className='font-bold text-5xl'>{t('Next.js base template')}</h1>
@@ -136,7 +92,6 @@ function ClientComponent() {
                     ))}
                 </Row>
             </main>
-        </div>
-        </>
-    );
+        </BasePageLayout>
+    )
 }

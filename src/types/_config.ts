@@ -2,6 +2,30 @@ import { Robots } from "next/dist/lib/metadata/types/metadata-types";
 import { HTMLAttributeAnchorTarget } from "react";
 import { URL } from "url";
 
+// authors
+interface TypeAuthorSocialAccounts {
+    email?: string;
+    github?: string | URL;
+    linkedin?: string | URL;
+    twitter?: string | URL;
+    facebook?: string | URL;
+    instagram?: string | URL;
+    youtube?: string | URL;
+    reddit?: string | URL;
+    tiktok?: string | URL;
+    telegram?: string | URL;
+    discord?: string | URL;
+    twitch?: string | URL;
+}
+interface TypeAuthor {
+    // Name of the author
+    name: string;
+    // URL of the author
+    url: string;
+    // Social accounts of the author
+    socialAccounts?: TypeAuthorSocialAccounts;
+}
+
 // Metadata
 interface Meta {
     // The origin of the site
@@ -94,8 +118,47 @@ interface TypeNavigation {
     contents: TypeNavigationContents[]
 }
 
+// Footer navigation
+interface TypeFooterNavigationUI {
+    // URL or path to the logo image
+    logo?: {
+        url?: string | URL; // URL of the logo image
+        alt?: string; // Alt text for the logo image
+        css?: string; // CSS
+    }
+    // Label for the site
+    label?: string;
+    // Style configuration for the navigation UI
+    style?: {
+        expand?: boolean | string | 'sm' | 'md' | 'lg' | 'xl' | 'xxl'; // Expansion size
+        bg?: string; // Background color
+        dataBsTheme?: string; // Bootstrap theme
+    }
+}
+interface TypeFooterNavigationContents {
+    // Label for the navigation content
+    label: string;
+    // URL of the navigation content (for single link)
+    url: string;
+    // Target attribute for the navigation content (for single link)
+    target?: HTMLAttributeAnchorTarget | undefined;
+}
+interface TypeFooterNavigationContentGroup {
+    label: string;
+    links: TypeFooterNavigationContents[];
+}
+interface TypeFooterNavigation {
+    // UI configuration for navigation
+    ui: TypeFooterNavigationUI
+    // List of navigation contents
+    contents: TypeFooterNavigationContentGroup[]
+}
+
 // Configuration Interface
 export interface Config {
+    year: string;
+    // Author
+    author: TypeAuthor
     // Metadata configuration
     meta: Meta;
     // Internationalization configuration
@@ -107,4 +170,5 @@ export interface Config {
     };
     // Navigation configuration
     navigation: TypeNavigation;
+    footer?: TypeFooterNavigation;
 }
