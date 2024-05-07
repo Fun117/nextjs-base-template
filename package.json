@@ -12,7 +12,7 @@
     "bootstrap": "^5.3.3",
     "i18next": "^23.11.3",
     "i18next-resources-to-backend": "^1.2.1",
-    "lucide-react": "^0.372.0",
+    "lucide-react": "^0.378.0",
     "negotiator": "^0.6.3",
     "next": "14.2.2",
     "next-i18next": "^15.3.0",
