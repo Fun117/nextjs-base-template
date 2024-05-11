@@ -1,8 +1,8 @@
 {
-    "page-not-found": "Page not found",
-    "page-not-found-description": "Please double-check the browser address bar or use the navigation to go to a known page.",
-    "error": "Error",
-    "error-description": "Please double-check the browser address bar or use the navigation to go to a known page.",
+  "page-not-found": "Page not found",
+  "page-not-found-description": "Please double-check the browser address bar or use the navigation to go to a known page.",
+  "error": "Error",
+  "error-description": "Please double-check the browser address bar or use the navigation to go to a known page.",
 
-    "all-rights-reserved": "All Rights Reserved"
+  "all-rights-reserved": "All Rights Reserved"
 }

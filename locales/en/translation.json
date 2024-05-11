@@ -1,13 +1,13 @@
 {
-    "Next.js base": "Next.js base",
-    "Next.js base template": "Next.js base template",
-    "Next.js base template website": "Next.js base template website",
-    "This Next.js base template is designed as an easy starting point for Next.js projects. It comes with features such as theme switching, i18n (internationalization), and automatic sitemap generation, allowing developers to start their projects quickly.": "This Next.js base template is designed as an easy starting point for Next.js projects. It comes with features such as theme switching, i18n (internationalization), and automatic sitemap generation, allowing developers to start their projects quickly.",
-    "Do you have experience creating websites? You can get started more easily with Next.js using this base template. The template comes with features such as theme switching, i18n (internationalization), and a sitemap. Additionally, React Bootstrap is used to simplify UI development.": "Do you have experience creating websites? You can get started more easily with Next.js using this base template. The template comes with features such as theme switching, i18n (internationalization), and a sitemap. Additionally, React Bootstrap is used to simplify UI development.",
-    "Home": "Home",
-    "About": "About",
-    "Development": "Development",
-    "Author": "Author",
-    "Repository": "Repository",
-    "Site link": "Site link"
+  "Next.js base": "Next.js base",
+  "Next.js base template": "Next.js base template",
+  "Next.js base template website": "Next.js base template website",
+  "This Next.js base template is designed as an easy starting point for Next.js projects. It comes with features such as theme switching, i18n (internationalization), and automatic sitemap generation, allowing developers to start their projects quickly.": "This Next.js base template is designed as an easy starting point for Next.js projects. It comes with features such as theme switching, i18n (internationalization), and automatic sitemap generation, allowing developers to start their projects quickly.",
+  "Do you have experience creating websites? You can get started more easily with Next.js using this base template. The template comes with features such as theme switching, i18n (internationalization), and a sitemap. Additionally, React Bootstrap is used to simplify UI development.": "Do you have experience creating websites? You can get started more easily with Next.js using this base template. The template comes with features such as theme switching, i18n (internationalization), and a sitemap. Additionally, React Bootstrap is used to simplify UI development.",
+  "Home": "Home",
+  "About": "About",
+  "Development": "Development",
+  "Author": "Author",
+  "Repository": "Repository",
+  "Site link": "Site link"
 }

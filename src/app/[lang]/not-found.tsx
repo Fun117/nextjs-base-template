@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { redirect } from "next/navigation";
 
@@ -7,6 +7,5 @@ import { redirect } from "next/navigation";
 // therefore doesn't have a locale associated with it.
 
 export default function NotFound({ params }: { params: { lang: string } }) {
-
-    redirect(`/${params.lang}/not-found`)
+  redirect(`/${params.lang}/not-found`);
 }

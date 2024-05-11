@@ -1,4 +1,3 @@
-
 import { Inter } from "next/font/google";
 
 // next-themes
@@ -8,18 +7,15 @@ const inter = Inter({ subsets: ["latin"] });
 
 // Layout
 export default function RootLayout({
-	children,
+  children,
 }: Readonly<{
-	children: React.ReactNode;
+  children: React.ReactNode;
 }>) {
-
-	return (
-		<html suppressHydrationWarning>
-			<body className={`flex h-full flex-col ${inter.className}`}>
-				<ThemeProvider attribute="class">
-					{children}
-				</ThemeProvider>
-			</body>
-		</html>
-	);
+  return (
+    <html suppressHydrationWarning>
+      <body className={`flex h-full flex-col ${inter.className}`}>
+        <ThemeProvider attribute="class">{children}</ThemeProvider>
+      </body>
+    </html>
+  );
 }
