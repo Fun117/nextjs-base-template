@@ -12,8 +12,8 @@
   <a aria-label="Vercel logo" href="https://vercel.com">
     <img src="https://img.shields.io/badge/MADE%20BY%20Vercel-000000.svg?style=for-the-badge&logo=Vercel&labelColor=000">
   </a>
-  <a aria-label="NPM version" href="https://www.npmjs.com/package/next/v/14.2.2">
-    <img alt="" src="https://img.shields.io/badge/V14.2.2-blue?style=for-the-badge&label=NPM&labelColor=black
+  <a aria-label="NPM version" href="https://www.npmjs.com/package/next/">
+    <img alt="" src="https://img.shields.io/npm/v/next?style=for-the-badge&label=NPM&labelColor=black
     ">
   </a>
   <a aria-label="License" href="https://github.com/Fun117/nextjs-base-template/blob/main/LICENSE.txt">
@@ -31,21 +31,20 @@
 </p>
 
 <p align="center">
-  <img alt="Mobile dark Image" src="../public/img/screenshot/2024-04-29 0.46.29-bg.png">
-  <img alt="Desctop lightImage" src="../public/img/screenshot/2024-04-29 0.44.00.png">
-  <img alt="Desctop dark Image" src="../public/img/screenshot/2024-04-29 0.44.01.png">
+  <img alt="デスクトップ ライト イメージ" src="../public/img/screenshot/ja-light-fullscreen.png">
+  <img alt="デスクトップ ダーク イメージ" src="../public/img/screenshot/ja-dark-fullscreen.png">
 </p>
 
-# Next.jsベーステンプレート
+# Next.js ベーステンプレート
 
-このNext.jsベーステンプレートは、Next.jsを始めるための簡単なスタートポイントとして設計されています。テーマ切り替え、i18n（国際化）、サイトマップなどの機能が事前に組み込まれており、開発者が迅速にプロジェクトを開始できるようになっています。
+この Next.js ベーステンプレートは、Next.js を始めるための簡単なスタートポイントとして設計されています。テーマ切り替え、i18n（国際化）、サイトマップなどの機能が事前に組み込まれており、開発者が迅速にプロジェクトを開始できるようになっています。
 
 ## 主な特徴
 
 - **テーマ切り替え**: ライトモードとダークモードの切り替えが可能です。
 - **i18n（国際化）**: 複数の言語をサポートしています。
-- **サイトマップ**: SEO対策としてサイトマップが自動生成されます。
-- **React Bootstrap**: UIの構築を容易にするためにReact Bootstrapを採用しています。
+- **サイトマップ**: SEO 対策としてサイトマップが自動生成されます。
+- **React Bootstrap**: UI の構築を容易にするために React Bootstrap を採用しています。
 
 ## 自分自身でデプロイ
 

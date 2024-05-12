@@ -12,8 +12,8 @@
   <a aria-label="Vercel logo" href="https://vercel.com">
     <img src="https://img.shields.io/badge/MADE%20BY%20Vercel-000000.svg?style=for-the-badge&logo=Vercel&labelColor=000">
   </a>
-  <a aria-label="NPM version" href="https://www.npmjs.com/package/next/v/14.2.2">
-    <img alt="" src="https://img.shields.io/badge/V14.2.2-blue?style=for-the-badge&label=NPM&labelColor=black">
+  <a aria-label="NPM version" href="https://www.npmjs.com/package/next/">
+    <img alt="" src="https://img.shields.io/npm/v/next?style=for-the-badge&label=NPM&labelColor=black">
   </a>
   <a aria-label="License" href="https://github.com/Fun117/nextjs-base-template/blob/main/LICENSE.txt">
     <img alt="" src="https://img.shields.io/github/license/Fun117/nextjs-base-template?style=for-the-badge&labelColor=000000">
@@ -30,9 +30,8 @@
 </p>
 
 <p align="center">
-  <img alt="Mobile dark Image" src="./public/img/screenshot/2024-04-29 0.46.29-bg.png">
-  <img alt="Desctop lightImage" src="./public/img/screenshot/2024-04-29 0.44.00.png">
-  <img alt="Desctop dark Image" src="./public/img/screenshot/2024-04-29 0.44.01.png">
+  <img alt="Desctop light Image" src="./public/img/screenshot/en-light-fullscreen.png">
+  <img alt="Desctop dark Image" src="./public/img/screenshot/en-dark-fullscreen.png">
 </p>
 
 # Next.js base template
