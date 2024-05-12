@@ -29,7 +29,7 @@ const _config: Config = {
     },
     Image: { icon: "/favicon.ico", apple: "/favicon.png" }, // Icon images
     cardImage:
-      "https://nextjs-base-template.vercel.app/brand/nextjs/twitter-card.png", // Card image
+      "https://nextjs-base-template.vercel.app/img/screenshot/en-light-fullscreen.png", // Card image
     robots: "follow, index", // Robots meta tag content
     url: getURL(), // Site URL
   },

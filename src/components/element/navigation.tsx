@@ -287,7 +287,7 @@ export function Footer() {
               {_config.author.socialAccounts?.email && (
                 <Link
                   aria-label="email"
-                  href={_config.author.socialAccounts?.email}
+                  href={`mailto:${_config.author.socialAccounts?.email}`}
                   target="_block"
                   className="border-neutral-300/40 p-[6px] border rounded-lg shadow-sm hover:shadow-lg hover:scale-[102%] active:shadow active:scale-[95%] transition-all duration-300 ease-in-out"
                 >
