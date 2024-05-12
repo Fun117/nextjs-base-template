@@ -10,6 +10,37 @@ import { Languages } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
+// shadcn/ui
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuPortal,
+  DropdownMenuSeparator,
+  DropdownMenuShortcut,
+  DropdownMenuSub,
+  DropdownMenuSubContent,
+  DropdownMenuSubTrigger,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+
 // bootstrap elements
 import {
   Button,
@@ -29,7 +60,7 @@ import { useLanguage, useTranslation } from "@/app/i18n/client";
 import { ChangeLang, LPass } from "../link";
 
 // next-theme
-import { ThemeSwitch } from "../client/theme-toggle";
+import { GetTheme, ThemeSwitch } from "../client/theme-toggle";
 import _config from "../../../base.config";
 
 // React Icons
@@ -41,10 +72,24 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import { MdAlternateEmail } from "react-icons/md";
+import useScroll from "@/lib/hooks/use-scroll";
 
 export function Header() {
   const { language } = useLanguage();
   const { t } = useTranslation(language);
+
+  const scrolled = useScroll(50);
+
+  function SetSelectLanguage(value: string) {
+    window.location.href = `${ChangeLang(`${value}`)}`;
+  }
+
+  const NavBrand_logo =
+    GetTheme() === "light"
+      ? _config.navigation?.ui?.logo?.url_dark ||
+        _config.navigation?.ui?.logo?.url ||
+        `/favicon.ico`
+      : _config.navigation?.ui?.logo?.url || `/favicon.ico`;
 
   return (
     <>
@@ -54,26 +99,32 @@ export function Header() {
         data-bs-theme={_config.navigation.ui.style?.dataBsTheme}
         className={`${
           _config.navigation.ui.style?.bg === "none" &&
-          `backdrop-blur-md border-b dark:border-neutral-700`
+          `${
+            scrolled
+              ? "border-b border-gray-200 dark:border-gray-800 bg-white/50 dark:bg-black/50 backdrop-blur-xl"
+              : "bg-white/0 dark:bg-black/0"
+          }`
         }`}
       >
         <Container fluid className="text-[var(--bs-navbar-brand-color)]">
-          <Navbar.Brand href={LPass(_config.navigation.ui.home_url || `/`)}>
-            {_config.navigation.ui.logo && (
-              <Image
-                alt={_config.navigation.ui.logo.alt || `Logo`}
-                src={`${_config.navigation.ui.logo.url || `/favicon.ico`}`}
-                width="30"
-                height="30"
-                className="d-inline-block align-top w-auto h-auto mr-2"
-              />
-            )}
-            {_config.navigation.ui.label && (
+          <Navbar.Brand href={_config.navigation?.ui?.home_url || `/`}>
+            {_config.navigation?.ui?.logo &&
+              _config.navigation?.ui?.logo?.url && (
+                <Image
+                  alt={_config.navigation?.ui?.logo?.alt || `Logo`}
+                  src={`${NavBrand_logo || `/favicon.ico`}`}
+                  width="30"
+                  height="30"
+                  className="d-inline-block align-top w-auto h-auto mr-2"
+                />
+              )}
+            {_config.navigation?.ui?.label && (
               <span className="text-base font-bold">
-                {t(_config.navigation.ui.label || `My site`)}
+                {t(_config.navigation.ui.label)}
               </span>
             )}
           </Navbar.Brand>
+
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
@@ -84,20 +135,26 @@ export function Header() {
               {_config.navigation.contents.map((content, idx) => (
                 <React.Fragment key={idx}>
                   {content.type === "group" ? (
-                    <NavDropdown
-                      title={t(content.label)}
-                      id={`navbarDropdown_${idx}`}
-                    >
-                      {content.links?.map((link, index) => (
-                        <NavDropdown.Item
-                          key={index}
-                          href={LPass(link.url)}
-                          target={link.target}
-                        >
-                          {t(link.label)}
-                        </NavDropdown.Item>
-                      ))}
-                    </NavDropdown>
+                    <DropdownMenu>
+                      <DropdownMenuTrigger asChild>
+                        <p className="nav-link">{t(content.label)}</p>
+                      </DropdownMenuTrigger>
+                      <DropdownMenuContent className="w-56">
+                        <DropdownMenuGroup>
+                          {content.links?.map((link, index) => (
+                            <Link
+                              key={index}
+                              href={LPass(link.url)}
+                              target={link.target}
+                            >
+                              <DropdownMenuItem>
+                                {t(link.label)}
+                              </DropdownMenuItem>
+                            </Link>
+                          ))}
+                        </DropdownMenuGroup>
+                      </DropdownMenuContent>
+                    </DropdownMenu>
                   ) : (
                     <Link
                       href={LPass(`${content.url}`)}
@@ -114,20 +171,24 @@ export function Header() {
               <Nav className=" my-2 my-lg-0" navbarScroll>
                 <div className="flex items-center transition-all duration-300 ease-in-out">
                   <Languages className="font-bold pr-1" />
-                  <select
-                    className="bg-transparent focus:outline-none"
+                  <Select
                     defaultValue={`${useLanguage().language}`}
-                    aria-label={`select language`}
-                    onChange={(e) =>
-                      (window.location.href = `${ChangeLang(e.target.value)}`)
-                    }
+                    onValueChange={SetSelectLanguage}
                   >
-                    {_config.i18n.locales.map((lang, idx) => (
-                      <option key={idx} value={lang}>
-                        {_config.i18n.localeConfigs[lang].label}
-                      </option>
-                    ))}
-                  </select>
+                    <SelectTrigger className="w-[180px]">
+                      <SelectValue placeholder="Select a fruit" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectGroup>
+                        <SelectLabel>{t("Language")}</SelectLabel>
+                        {_config.i18n.locales.map((lang, idx) => (
+                          <SelectItem key={idx} value={lang}>
+                            {_config.i18n.localeConfigs[lang].label}
+                          </SelectItem>
+                        ))}
+                      </SelectGroup>
+                    </SelectContent>
+                  </Select>
                 </div>
               </Nav>
               <ThemeSwitch />
@@ -145,7 +206,7 @@ export function Footer() {
 
   return (
     <div className="pt-10">
-      <footer className="border-t flex flex-col w-full transition-all duration-100 ease-in-out">
+      <footer className="border-t border-neutral-200 dark:border-neutral-700 flex flex-col w-full transition-all duration-100 ease-in-out">
         <div className="flex justify-between flex-row flex-wrap px-5 md:px-20 py-5 md:py-10">
           <div className="flex flex-col gap-4 mr-5">
             <Link
@@ -260,10 +321,8 @@ export function Footer() {
             })}
           </div>
         </div>
-        <div className="border-neutral-200 border-t flex items-center justify-center w-auto p-3 mx-[5%]">
+        <div className="border-t border-neutral-200 dark:border-neutral-700 flex items-center justify-center w-auto p-3 mx-[5%]">
           <span>
-            &copy; {_config.year}
-            {` `}
             {t(`site:all-rights-reserved`)}
           </span>
         </div>

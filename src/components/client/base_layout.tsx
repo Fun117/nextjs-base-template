@@ -73,13 +73,7 @@ function _BasePage({ children }: { children: React.ReactNode }) {
 
   return (
     <>
-      <div className="flex flex-col w-full h-full transition-all duration-500 ease-in-out">
-        <div className="sticky top-0 left-0 z-[200]">
-          <Header />
-        </div>
-        {children}
-        <Footer />
-      </div>
+      {children}
     </>
   );
 }

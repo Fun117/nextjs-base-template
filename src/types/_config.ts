@@ -80,6 +80,7 @@ interface TypeNavigationUI {
   // URL or path to the logo image
   logo?: {
     url?: string | URL; // URL of the logo image
+    url_dark?: string | URL; // URL of the dark logo image
     alt?: string; // Alt text for the logo image
   };
   // Label for the site

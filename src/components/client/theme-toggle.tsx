@@ -74,5 +74,5 @@ export const ThemeSwitch = () => {
 
 export function GetTheme() {
   const { resolvedTheme } = useTheme();
-  return resolvedTheme;
+  return resolvedTheme as string;
 }

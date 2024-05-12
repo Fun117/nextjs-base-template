@@ -33,14 +33,14 @@ const modules_card = [
       "Next.js by Vercel is the full-stack React framework for the web.",
     url: "https://nextjs.org/",
     image_url: "/brand/nextjs/twitter-card.png",
-    version: `14.2.2`,
+    version: `Latest`,
   },
   {
     title: "React Bootstrap",
     description: "The most popular front-end framework, rebuilt for React",
     url: "https://react-bootstrap.netlify.app/",
     image_url: "/img/modules/react-bootstrap/banner.png",
-    version: `2.10.2`,
+    version: `Latest`,
   },
   {
     title: "i18next",
@@ -48,7 +48,7 @@ const modules_card = [
       "i18next is a very popular internationalization framework for browser or any other javascript environment (eg. Node.js, Deno).",
     url: "https://github.com/i18next/i18next",
     image_url: "/img/modules/i18next/banner.png",
-    version: `23.11.2`,
+    version: `Latest`,
   },
   {
     title: "next-themes",
@@ -56,7 +56,7 @@ const modules_card = [
       "Perfect Next.js dark mode in 2 lines of code. Support System preference and any other theme with no flashing",
     url: "https://github.com/pacocoursey/next-themes",
     image_url: "/brand/nextjs/twitter-card.png",
-    version: `0.3.0`,
+    version: `Latest`,
   },
 ];
 

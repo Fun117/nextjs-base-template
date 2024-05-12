@@ -70,12 +70,12 @@ const _config: Config = {
       home_url: "/",
       logo: {
         url: "/brand/vercel/vercel-icon-light.png",
+        url_dark: '/brand/vercel/vercel-icon-dark.png',
         alt: "Vercel Logo",
       },
       label: "Next.js base",
       style: {
-        bg: "primary",
-        dataBsTheme: "dark",
+        bg: "none",
       },
     },
     contents: [
@@ -140,6 +140,11 @@ const _config: Config = {
           {
             label: "Next.js",
             url: "https://nextjs.org/",
+            target: "_blank",
+          },
+          {
+            label: "shadcn/ui",
+            url: "https://ui.shadcn.com/",
             target: "_blank",
           },
           {

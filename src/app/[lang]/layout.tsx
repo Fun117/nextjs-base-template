@@ -15,6 +15,8 @@ import { ThemeProvider } from "next-themes";
 import { LanguageProvider } from "../i18n/client";
 import { dir } from "i18next";
 import { ServerTranslation, getTranslation } from "../i18n/server";
+import { Footer, Header } from "@/components/element/navigation";
+import { Suspense } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -73,7 +75,7 @@ export async function generateMetadata(
 }
 
 // Layout
-export default function RootLayout({
+export default async function RootLayout({
   children,
   params: { lang },
 }: Readonly<{
@@ -85,8 +87,23 @@ export default function RootLayout({
   return (
     <html lang={lang} dir={dir(lang)} suppressHydrationWarning>
       <LanguageProvider initialLanguage={lang}>
-        <body className={`flex h-full flex-col ${inter.className}`}>
-          <ThemeProvider attribute="class">{children}</ThemeProvider>
+        <body
+          className={`flex h-full flex-col transition-all duration-300 ease-in-out ${inter.className}`}
+          suppressHydrationWarning
+        >
+          <ThemeProvider attribute="class">
+            <div className="sticky top-0 left-0 z-[200]">
+              <Suspense fallback="...">
+                <Header />
+              </Suspense>
+            </div>
+            <div className="flex flex-col w-full h-full transition-all duration-500 ease-in-out">
+              <Suspense fallback="...">{children}</Suspense>
+            </div>
+            <Suspense fallback="...">
+              <Footer />
+            </Suspense>
+          </ThemeProvider>
         </body>
       </LanguageProvider>
     </html>

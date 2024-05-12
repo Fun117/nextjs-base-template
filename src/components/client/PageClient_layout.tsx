@@ -85,9 +85,6 @@ function ClientComponent({
 
   return (
     <>
-      <div>
-        <Header />
-      </div>
       <div className="relative grow flex flex-col py-36">
         <main className="relative flex grow flex-col text-center w-full mx-auto px-4">
           <h1 className="font-bold text-5xl">{title}</h1>

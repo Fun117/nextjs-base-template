@@ -33,7 +33,15 @@ const modules_card = [
       "Next.js by Vercel is the full-stack React framework for the web.",
     url: "https://nextjs.org/",
     image_url: "/brand/nextjs/twitter-card.png",
-    version: `14.2.2`,
+    version: `Latest`,
+  },
+  {
+    title: "shadcn/ui",
+    description:
+      "Beautifully designed components that you can copy and paste into your apps. Accessible. Customizable. Open Source.",
+    url: "https://ui.shadcn.com/",
+    image_url: "/img/modules/shadcn-ui/banner.jpg",
+    version: `Latest`,
   },
   {
     title: "next-themes",
@@ -41,14 +49,14 @@ const modules_card = [
       "Perfect Next.js dark mode in 2 lines of code. Support System preference and any other theme with no flashing",
     url: "https://github.com/pacocoursey/next-themes",
     image_url: "/brand/nextjs/twitter-card.png",
-    version: `0.3.0`,
+    version: `Latest`,
   },
   {
     title: "React Bootstrap",
     description: "The most popular front-end framework, rebuilt for React",
     url: "https://react-bootstrap.netlify.app/",
     image_url: "/img/modules/react-bootstrap/banner.png",
-    version: `2.10.2`,
+    version: `Latest`,
   },
   {
     title: "i18next",
@@ -56,14 +64,14 @@ const modules_card = [
       "i18next is a very popular internationalization framework for browser or any other javascript environment (eg. Node.js, Deno).",
     url: "https://www.i18next.com/",
     image_url: "/img/modules/i18next/banner.png",
-    version: `23.11.2`,
+    version: `Latest`,
   },
   {
     title: "Lucide React",
     description: "Beautiful & consistent icon toolkit made by the community.",
     url: "https://lucide.dev/",
     image_url: "/img/modules/lucide-react/banner.png",
-    version: `0.372.0`,
+    version: `Latest`,
   },
   {
     title: "Custom Sitemap Generation",
@@ -71,7 +79,7 @@ const modules_card = [
       "Automatically generate sitemaps tailored for different languages.",
     url: "https://nextjs.org/docs/app/api-reference/file-conventions/metadata/sitemap",
     image_url: "/brand/nextjs/docs/sitemap-banner.png",
-    version: `New`,
+    version: `Latest`,
   },
 ];
 
