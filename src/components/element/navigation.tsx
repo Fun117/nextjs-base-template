@@ -135,26 +135,45 @@ export function Header() {
               {_config.navigation.contents.map((content, idx) => (
                 <React.Fragment key={idx}>
                   {content.type === "group" ? (
-                    <DropdownMenu>
-                      <DropdownMenuTrigger asChild>
-                        <p className="nav-link">{t(content.label)}</p>
-                      </DropdownMenuTrigger>
-                      <DropdownMenuContent className="w-56">
-                        <DropdownMenuGroup>
+                    <>
+                      <div className="hidden md:block">
+                        <DropdownMenu>
+                          <DropdownMenuTrigger asChild>
+                            <p className="nav-link">{t(content.label)}</p>
+                          </DropdownMenuTrigger>
+                          <DropdownMenuContent className="z-[201] w-56">
+                            <DropdownMenuGroup>
+                              {content.links?.map((link, index) => (
+                                <Link
+                                  key={index}
+                                  href={LPass(link.url)}
+                                  target={link.target}
+                                >
+                                  <DropdownMenuItem>
+                                    {t(link.label)}
+                                  </DropdownMenuItem>
+                                </Link>
+                              ))}
+                            </DropdownMenuGroup>
+                          </DropdownMenuContent>
+                        </DropdownMenu>
+                      </div>
+                      <div className="block md:hidden">
+                        <NavDropdown title={t(content.label)} id={`nav-dropdown-${idx}`}>
                           {content.links?.map((link, index) => (
                             <Link
                               key={index}
                               href={LPass(link.url)}
                               target={link.target}
                             >
-                              <DropdownMenuItem>
+                              <NavDropdown.Item>
                                 {t(link.label)}
-                              </DropdownMenuItem>
+                              </NavDropdown.Item>
                             </Link>
                           ))}
-                        </DropdownMenuGroup>
-                      </DropdownMenuContent>
-                    </DropdownMenu>
+                        </NavDropdown>
+                      </div>
+                    </>
                   ) : (
                     <Link
                       href={LPass(`${content.url}`)}
@@ -178,7 +197,7 @@ export function Header() {
                     <SelectTrigger className="w-[180px]">
                       <SelectValue placeholder="Select a fruit" />
                     </SelectTrigger>
-                    <SelectContent>
+                    <SelectContent className="z-[201]">
                       <SelectGroup>
                         <SelectLabel>{t("Language")}</SelectLabel>
                         {_config.i18n.locales.map((lang, idx) => (
@@ -322,9 +341,7 @@ export function Footer() {
           </div>
         </div>
         <div className="border-t border-neutral-200 dark:border-neutral-700 flex items-center justify-center w-auto p-3 mx-[5%]">
-          <span>
-            {t(`site:all-rights-reserved`)}
-          </span>
+          <span>{t(`site:all-rights-reserved`)}</span>
         </div>
       </footer>
     </div>
