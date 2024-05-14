@@ -88,11 +88,11 @@ export default async function RootLayout({
     <html lang={lang} dir={dir(lang)} suppressHydrationWarning>
       <LanguageProvider initialLanguage={lang}>
         <body
-          className={`flex h-full flex-col transition-all duration-300 ease-in-out ${inter.className}`}
+          className={`flex w-full min-h-screen h-full flex-col transition-all duration-300 ease-in-out ${inter.className}`}
           suppressHydrationWarning
         >
           <ThemeProvider attribute="class">
-            <div className="sticky top-0 left-0 z-[200]">
+            <div className="sticky top-0 left-0 z-[200] backdrop-blur-xl">
               <Suspense fallback="...">
                 <Header />
               </Suspense>

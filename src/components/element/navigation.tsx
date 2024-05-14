@@ -73,7 +73,7 @@ export function Header() {
       : _config.navigation?.ui?.logo?.url || "/favicon.ico";
 
   return (
-    <div className="backdrop-blur-xl">
+    <>
       <Navbar
         expand={_config.navigation.ui.style?.expand || "lg"}
         bg={_config.navigation.ui.style?.bg || "primary"}
@@ -186,7 +186,7 @@ export function Header() {
           </Navbar.Offcanvas>
         </Container>
       </Navbar>
-    </div>
+    </>
   );
 }
 
@@ -292,7 +292,7 @@ export function Footer() {
                   {group.links.map((content, index2) => (
                     <li key={index2}>
                       <Link
-                        href={content.url}
+                        href={LPass(content.url)}
                         target={content.target}
                         className="hover:underline"
                       >

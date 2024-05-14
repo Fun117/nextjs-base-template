@@ -72,8 +72,8 @@ function _BasePage({ children }: { children: React.ReactNode }) {
   const { t } = useTranslation(language);
 
   return (
-    <>
+    <main className="flex flex-col gap-3 w-auto max-w-7xl mx-auto px-1 py-2">
       {children}
-    </>
+    </main>
   );
 }

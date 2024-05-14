@@ -89,39 +89,37 @@ export default function PageClientLayout_About() {
 
   return (
     <BasePageLayout>
-      <main className="flex flex-col gap-3 w-auto max-w-7xl mx-auto px-1 py-2">
-        <div className="flex flex-col gap-2 text-center py-5">
-          <h1 className="font-bold text-5xl">{t("Next.js base template")}</h1>
-          <p>
-            {t(
-              "Do you have experience creating websites? You can get started more easily with Next.js using this base template. The template comes with features such as theme switching, i18n (internationalization), and a sitemap. Additionally, React Bootstrap is used to simplify UI development."
-            )}
-          </p>
-        </div>
-        <Row xs={1} md={2} className="g-4">
-          {modules_card.map((card, idx) => (
-            <Col key={idx} className="flex">
-              <Link
-                target="_block"
-                href={card.url}
-                className="flex no-underline w-full h-full"
-              >
-                <Card className="w-full h-full">
-                  <div
-                    className="w-full h-[260px] bg-cover bg-no-repeat bg-center rounded-[0.375rem] rounded-b-none"
-                    style={{ backgroundImage: `url(${card.image_url})` }}
-                  />
-                  <Card.Body>
-                    <Card.Title>{card.title}</Card.Title>
-                    <Card.Text>{card.description}</Card.Text>
-                    <Badge bg="primary">{card.version}</Badge>
-                  </Card.Body>
-                </Card>
-              </Link>
-            </Col>
-          ))}
-        </Row>
-      </main>
+      <div className="flex flex-col gap-2 text-center py-5">
+        <h1 className="font-bold text-5xl">{t("Next.js base template")}</h1>
+        <p>
+          {t(
+            "Do you have experience creating websites? You can get started more easily with Next.js using this base template. The template comes with features such as theme switching, i18n (internationalization), and a sitemap. Additionally, React Bootstrap is used to simplify UI development."
+          )}
+        </p>
+      </div>
+      <Row xs={1} md={2} className="g-4">
+        {modules_card.map((card, idx) => (
+          <Col key={idx} className="flex">
+            <Link
+              target="_block"
+              href={card.url}
+              className="flex no-underline w-full h-full"
+            >
+              <Card className="w-full h-full">
+                <div
+                  className="w-full h-[260px] bg-cover bg-no-repeat bg-center rounded-[0.375rem] rounded-b-none"
+                  style={{ backgroundImage: `url(${card.image_url})` }}
+                />
+                <Card.Body>
+                  <Card.Title>{card.title}</Card.Title>
+                  <Card.Text>{card.description}</Card.Text>
+                  <Badge bg="primary">{card.version}</Badge>
+                </Card.Body>
+              </Card>
+            </Link>
+          </Col>
+        ))}
+      </Row>
     </BasePageLayout>
   );
 }
