@@ -74,6 +74,11 @@ export function Header() {
 
   return (
     <>
+      <div
+        className={`absolute w-full h-full pointer-events-none ${
+          scrolled ? "backdrop-blur-xl" : "bg-white/0 dark:bg-black/0"
+        }`}
+      ></div>
       <Navbar
         expand={_config.navigation.ui.style?.expand || "lg"}
         bg={_config.navigation.ui.style?.bg || "primary"}

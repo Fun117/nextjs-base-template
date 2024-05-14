@@ -92,7 +92,7 @@ export default async function RootLayout({
           suppressHydrationWarning
         >
           <ThemeProvider attribute="class">
-            <div className="sticky top-0 left-0 z-[200] backdrop-blur-xl">
+            <div className="sticky top-0 left-0 z-[200]">
               <Suspense fallback="...">
                 <Header />
               </Suspense>

@@ -138,38 +138,18 @@ const _config: Config = {
         label: "Development",
         links: [
           {
-            label: "Next.js",
-            url: "https://nextjs.org/",
+            label: "Repository",
+            url: "https://github.com/Fun117/nextjs-base-template",
             target: "_blank",
           },
           {
-            label: "shadcn/ui",
-            url: "https://ui.shadcn.com/",
+            label: "Issues",
+            url: "https://github.com/Fun117/nextjs-base-template/issues",
             target: "_blank",
           },
           {
-            label: "next-themes",
-            url: "https://github.com/pacocoursey/next-themes",
-            target: "_blank",
-          },
-          {
-            label: "i18next",
-            url: "https://www.i18next.com/",
-            target: "_blank",
-          },
-          {
-            label: "Lucide React",
-            url: "https://lucide.dev/",
-            target: "_blank",
-          },
-          {
-            label: "React Bootstrap",
-            url: "https://react-bootstrap.netlify.app/",
-            target: "_blank",
-          },
-          {
-            label: "Sitemap",
-            url: "https://nextjs.org/docs/app/api-reference/file-conventions/metadata/sitemap",
+            label: "Discussions",
+            url: "https://github.com/Fun117/nextjs-base-template/discussions",
             target: "_blank",
           },
         ],
