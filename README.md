@@ -29,6 +29,18 @@
   </a>
 </p>
 
+<div align="center">
+ <img alt="badge" src="https://img.shields.io/github/watchers/fun117/nextjs-base-template"/>
+ <img alt="badge" src="https://img.shields.io/github/stars/fun117/nextjs-base-template"/>
+ <img alt="badge" src="https://img.shields.io/github/forks/fun117/nextjs-base-template"/>
+ <img alt="badge" src="https://img.shields.io/github/downloads/fun117/nextjs-base-template/total?style=social"/>
+ <img alt="badge" src="https://img.shields.io/github/v/release/fun117/nextjs-base-template?style=social"/>
+ <img alt="badge" src="https://img.shields.io/badge/1,013-a?style=social&label=View"/>
+ <img alt="badge" src="https://img.shields.io/badge/114-a?style=social&label=Git%20Clone"/>
+ <img alt="badge" src="https://img.shields.io/github/commit-activity/t/fun117/nextjs-base-template?style=social"/>
+ <img alt="badge" src="https://img.shields.io/github/last-commit/fun117/nextjs-base-template?style=social"/>
+</div>
+
 <p align="center">
   <img alt="Desctop light Image" src="./public/img/screenshot/en-light-fullscreen.png">
   <img alt="Desctop dark Image" src="./public/img/screenshot/en-dark-fullscreen.png">
