@@ -26,7 +26,7 @@
     "bootstrap": "^5.3.3",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
-    "i18next": "^23.11.4",
+    "i18next": "^23.11.5",
     "i18next-resources-to-backend": "^1.2.1",
     "lucide-react": "^0.378.0",
     "negotiator": "^0.6.3",
