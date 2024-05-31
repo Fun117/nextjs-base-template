@@ -28,7 +28,7 @@
     "clsx": "^2.1.1",
     "i18next": "^23.11.5",
     "i18next-resources-to-backend": "^1.2.1",
-    "lucide-react": "^0.379.0",
+    "lucide-react": "^0.381.0",
     "negotiator": "^0.6.3",
     "next": "14.2.3",
     "next-i18next": "^15.3.0",
