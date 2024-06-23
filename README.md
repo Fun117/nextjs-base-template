@@ -41,6 +41,10 @@
  <img alt="badge" src="https://img.shields.io/github/last-commit/fun117/nextjs-base-template?style=social"/>
 </div>
 
+> [!IMPORTANT]
+> # Development has Ended!
+> I have decided to discontinue development of this template as I am now working on a new project called [Next.js Rich Template](https://nextjs-rich-tpl.vercel.app). The [new template](https://nextjs-rich-tpl.vercel.app) incorporates my current knowledge and skills to the fullest, offering numerous improvements and new features. It aims to be a significantly enhanced and nearly perfect template, distinct from this one. Web developers, please visit the new project and explore!
+
 <p align="center">
   <img alt="Desctop light Image" src="./public/img/screenshot/en-light-fullscreen.png">
   <img alt="Desctop dark Image" src="./public/img/screenshot/en-dark-fullscreen.png">
