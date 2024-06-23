@@ -30,6 +30,10 @@
   </a>
 </p>
 
+> [!IMPORTANT]
+> # 開発を終了しました！
+> 新たに [Next.js Rich Template](https://nextjs-rich-tpl.vercel.app) を開発することにした為、このテンプレートの開発を終了します。[新しいテンプレート](https://nextjs-rich-tpl.vercel.app)は私の現在の知識と技術を最大限費やして作成している為、たくさんの改良と新機能があります。このテンプレートとは全く違う、完璧なテンプレートに近いものが完成しようとしています！ぜひウェブ開発者は新しいプロジェクトに訪れてみてく> ださい。
+
 <p align="center">
   <img alt="デスクトップ ライト イメージ" src="../public/img/screenshot/ja-light-fullscreen.png">
   <img alt="デスクトップ ダーク イメージ" src="../public/img/screenshot/ja-dark-fullscreen.png">
